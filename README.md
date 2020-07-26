@@ -16,14 +16,18 @@ export HDF5_USE_FILE_LOCKING='FALSE'
 ## How to Run
 
 - Example command line to train the cue-detector: \
+```bash
   python train.py -c ./config/config.json 
+```
   + Arguments:
 	  - -c, --config_path: path to the configuration file, (required)
   
   *Note that: Training the system is optional, a trained model is already provided in "./model" directory. The pre-trained model can be used to predict negation cues in a text file (step is given below).
 	
 - Example command line to apply prediction on a given text file. \
+```bash
   python predict.py -c ./config/config.json -i ./data/sample-io/input_file.txt -o ./data/sample-io/
+```
   + Arguments:
 	  - -c, --config-path: path to the configuration file; (required). Contains details parameter settings.
 	  - -i, --input-file-path: path to the sample input file (text file, one sentence per line); (required)
