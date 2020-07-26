@@ -2,7 +2,7 @@ Negation Cue Detection
 ===================================================================
 
 ## Requirements
-Python 3.5+ \
+Python 3.5+ (recommended: Python 3.6) \
 Python packages: list of packages are provided in env-setup/requirements.txt file. \
 Embedding: Download the file "glove.6B.300d.txt" from https://nlp.stanford.edu/projects/glove/ and put it in ./embeddings/globe directory
 
