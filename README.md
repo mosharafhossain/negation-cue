@@ -41,7 +41,7 @@ python -m spacy download en_core_web_sm
 
 ## Citation
 
-Negation cue detection is part of the predicting scope of negation which is also part of paper "Predicting the Focus of Negation: Model and Error Analysis". 
+Negation cue detection is part of predicting scope of negation which is also part of the paper "Predicting the Focus of Negation: Model and Error Analysis". 
 ```bibtex
 @inproceedings{hossain-etal-2020-predicting,
     title = "Predicting the Focus of Negation: Model and Error Analysis",
