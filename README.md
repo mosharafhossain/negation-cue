@@ -9,6 +9,7 @@ Embedding: Download the file "glove.6B.300d.txt" from https://nlp.stanford.edu/p
 ```bash
 pip install -r ./env-setup/requirements.txt
 python -m spacy download en_core_web_sm
+export HDF5_USE_FILE_LOCKING='FALSE'
 ```
 
 
