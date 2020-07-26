@@ -6,6 +6,12 @@ Python 3.5+ \
 Python packages: list of packages are provided in env-setup/requirements.txt file. \
 Embedding: Download the file "glove.6B.300d.txt" from https://nlp.stanford.edu/projects/glove/ and put it in ./embeddings/globe directory
 
+```bash
+pip install -r ./env-setup/requirements.txt
+python -m spacy download en_core_web_sm
+```
+
+
 ## How to Run
 
 - Example command line to train the cue-detector: \
@@ -31,3 +37,25 @@ Embedding: Download the file "glove.6B.300d.txt" from https://nlp.stanford.edu/p
 ./data/sample-io/with_neg.txt (contains sentences with negation, one sentence per line) \
 ./data/sample-io/with_neg_cue_tags.txt (contains sentences (tokenized) with negation tag (Y if token is a negation cue, otherwise N) \
 ./data/sample-io/without_neg.txt (contains sentences without negation, one sentence per line)
+
+
+## Citation
+
+Negation cue detection is part of the predicting scope of negation which is also part of paper "Predicting the Focus of Negation: Model and Error Analysis". 
+```bibtex
+@inproceedings{hossain-etal-2020-predicting,
+    title = "Predicting the Focus of Negation: Model and Error Analysis",
+    author = "Hossain, Md Mosharaf  and
+      Hamilton, Kathleen  and
+      Palmer, Alexis  and
+      Blanco, Eduardo",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.743",
+    pages = "8389--8401",
+    abstract = "The focus of a negation is the set of tokens intended to be negated, and a key component for revealing affirmative alternatives to negated utterances. In this paper, we experiment with neural networks to predict the focus of negation. Our main novelty is leveraging a scope detector to introduce the scope of negation as an additional input to the network. Experimental results show that doing so obtains the best results to date. Additionally, we perform a detailed error analysis providing insights into the main error categories, and analyze errors depending on whether the model takes into account scope and context information.",
+}
+```
