@@ -7,6 +7,11 @@ Python packages: list of packages are provided in env-setup/requirements.txt fil
 Embedding: Download the file "glove.6B.300d.txt" from https://nlp.stanford.edu/projects/glove/ and put it in ./embeddings/globe directory
 
 ```bash
+# Create virtual env (Assuming you have Python 3.5 or 3.6 installed in your machine) -> optional step
+python3 -m venv your_location/negation-cue
+source your_location/negation-cue/bin/activate
+
+# Install required packages -> required step
 pip install -r ./env-setup/requirements.txt
 python -m spacy download en_core_web_sm
 export HDF5_USE_FILE_LOCKING='FALSE'
@@ -15,7 +20,7 @@ export HDF5_USE_FILE_LOCKING='FALSE'
 
 ## How to Run
 
-- Example command line to train the cue-detector: \
+- Example command line to train the cue-detector: 
 ```bash
   python train.py -c ./config/config.json 
 ```
@@ -24,7 +29,7 @@ export HDF5_USE_FILE_LOCKING='FALSE'
   
   *Note that: Training the system is optional, a trained model is already provided in "./model" directory. The pre-trained model can be used to predict negation cues in a text file (step is given below).
 	
-- Example command line to apply prediction on a given text file. \
+- Example command line to apply prediction on a given text file. 
 ```bash
   python predict.py -c ./config/config.json -i ./data/sample-io/input_file.txt -o ./data/sample-io/
 ```
